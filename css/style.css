@@ -1,0 +1,247 @@
+nav {
+  background-color: aquamarine;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  
+}
+
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  text-shadow: 3px 2px 3px black;
+}
+
+.box {
+  background: blue;
+  height: 200px;
+  width: 200px;
+  /* display: inline-block; */
+  margin: 10px;
+}
+
+.flex {
+  display: flex;
+  margin: 30px;
+  border: 3px solid black;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+}
+
+form input, textarea, button {
+  display: block;
+  margin: 30px;
+}
+
+
+
+@keyframes fadeMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+
+#box1 {
+  animation-name: fadeMe;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(90deg);
+  }
+50% {
+   transform: rotate(180deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
+
+#box2 {
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: 4s;
+  animation-timing-function: ease-in-out;
+  border-radius: 10%;
+  background: radial-gradient(circle, purple, orange, yellow, pink, purple);
+}
+
+@keyframes getBigger {
+  0% {transform: scale(1);}
+  50% {transform: scale(2);}
+  100% {transform: scale(0.5);}
+}
+
+#box3 {
+  animation: getBigger infinite 8s linear ;
+  border-radius: 50%;
+  background: orange;
+}
+
+@keyframes changeColors {
+  0% {background-color: grey;}
+  25% {background-color: purple;}
+  50% {background-color: yellow;}
+  75% {background-color: pink;}
+  100% {background-color: grey;}
+}
+
+
+#box4 {
+  animation: changeColors 7s infinite forwards;
+
+}
+
+/* @keyframes moveBox {
+  0% {left: 0px; top: 0px;}
+  25% {left: 100px; top: 0px;}
+  50% {left: 100px; top: 200px;}
+  75% {left: 0px; top: 200px;}
+  100% {left: 0px; top: 0px;}
+} */
+
+@keyframes moveBox {
+  0% {
+  	background-color: purple;
+    left: 0px; 
+    top: 0px;
+  }
+  
+  25% {
+  	background-color: pink;
+    left: 500px;
+    top: 0px;
+    }
+    
+  50% {
+  	background-color: yellow;
+    left: 500px;
+    top: 1000px;
+  }
+  
+  75% {
+  	background-color: green;
+    left: 0px;
+    top: 1000px;
+  }
+  
+  100% {
+  background-color: blue;
+  left: 0px;
+  top: 0px;
+  }
+   
+  
+}
+
+#box5 {
+  position: relative;
+  background: red;
+  animation: moveBox 5s 3s;
+}
+
+#box6 {
+  top: 10px;
+  left: 20px;
+  position: relative;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  margin: 20px;
+}
+
+.input-field {
+  margin: 20px;
+}
+
+.btn {
+  margin: 30px;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, [col] 20% ) ;
+  grid-template-rows: repeat(3, [row] auto  );
+  background-color: #fff;
+  color: #444;
+}
+
+.boxGrid {
+  background-color: #fff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  z-index:10;
+
+}
+
+.a {
+  grid-column: col / span  2;
+  grid-row: row ;
+  display: flex;
+  justify-content: center;
+}
+.b {
+  grid-column: col 4 / span  2 ;
+  grid-row: row ;
+  display: flex;
+  justify-content: center;
+}
+.c {
+  grid-column: col / span 5;
+  grid-row: row 2 ;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(pink, yellow, purple, orange);
+}
+.d {
+  grid-column: col / span  3 ;
+  grid-row: row 3 ;
+  display: flex;
+  justify-content: center;
+}
+
+.e {
+  grid-column: col 3 / span  3;
+  grid-row: row 3;
+  display: flex;
+  justify-content: center;
+}
+
+.f {
+  grid-column: col 2 / span 3;
+  grid-row: row 2  ;
+  background-color: rgba(49,121,207, 0.5);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(orange, purple, yellow, pink);
+}
